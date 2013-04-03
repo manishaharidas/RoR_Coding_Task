@@ -11,7 +11,7 @@ file = File.new("sitemap.xml")
 doc = Document.new(file)
 doc.elements.each("*/url"){ |url|
 print url.elements["loc"].text()
-print "\t\t"
+print "\t\t\t"
 puts url.elements["priority"].text()
 }
 con.query("CREATE TABLE IF NOT EXISTS \ SITEMAP(ID INT PRIMARY KEY AUTO_INCREMENT, LOC VARCHAR(40),PRIORITY FLOAT)")
